@@ -1,0 +1,14 @@
+<%- include('header') %>
+<main class="container">
+  <% for(var i = 0; i < posts.length; i++){ %>
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic"><%- posts[i].title %></h1>
+        <p class="lead my-3"><%- posts[i].date %></p>
+        <p class="lead my-3"><%- posts[i].body.substr(0,99)+'...' %></p>
+        <p class="lead mb-0"><a href="/posts/<%- posts[i].uid %>" class="text-white fw-bold">Continue reading...</a></p>
+      </div>
+    </div>
+    <% } %>
+</main>
+<%- include('footer') %>  

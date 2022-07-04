@@ -1,0 +1,15 @@
+<%- include('header') %>
+<main style="width: 80%; margin: 25px auto;">
+    <form action="/compose" method="post">
+        <div class="form-floating">
+            <input type="text" class="form-control" name="title" id="floatingTitle">
+            <label for="floatingTitle">Title</label>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" style="height: 150px;"name="body" id="floatingBody" rows="5"></textarea>
+            <label for="floatingBody">Body</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Post</button>
+    </form>
+</main>
+<%- include('footer') %>
